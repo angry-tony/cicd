@@ -1,0 +1,21 @@
+classes:
+- system.linux.system.repo.mcp.openstack
+- system.linux.system.repo.mcp.extra
+- system.linux.system.repo.tcp_extra
+- system.linux.network.interface.single_ovs_dvr
+- system.neutron.gateway.cluster
+- cluster.mcp1_lab_dvr
+parameters:
+  _param:
+    primary_interface: ens4
+    tenant_interface: ens5
+    external_interface: ens6
+    interface_mtu: 9000
+    neutron_gateway_dvr: True
+    neutron_gateway_agent_mode: dvr_snat
+    linux_system_codename: xenial
+  neutron:
+    gateway:
+      notification:
+        driver: messagingv2
+        topics: "notifications,${_param:stacklight_notification_topic}"

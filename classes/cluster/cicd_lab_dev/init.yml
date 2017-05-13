@@ -1,0 +1,27 @@
+classes:
+- system.linux.system.single
+- system.rsyslog.client.single
+- system.linux.system.haveged
+- system.linux.system.prompt
+- system.linux.system.motd.dynamic
+- system.openssh.server.team.lab
+- system.openssh.server.team.tcpcloud
+- system.openssh.server.team.mcp_qa
+- system.openssh.server.team.oss_team
+
+parameters:
+  _param:
+    cluster_domain: cicd-lab-dev.local
+    cluster_name: cicd_lab_dev
+    apt_mk_version: nightly
+    admin_email: root@localhost
+    salt_master_host: 172.16.10.11
+    salt_minion_ca_host: ci01.${_param:cluster_domain}
+    salt_minion_ca_authority: salt_master_ca
+    salt_api_password: hovno12345!
+    salt_api_password_hash: "$6$sGnRlxGf$al5jMCetLP.vfI/fTl3Z0N7Za1aeiexL487jAtyRABVfT3NlwZxQGVhO7S1N8OwS/34VHYwZQA8lkXwKMN/GS1"
+
+  linux:
+    network:
+      # Ensure consistent /etc/hosts
+      purge_hosts: true

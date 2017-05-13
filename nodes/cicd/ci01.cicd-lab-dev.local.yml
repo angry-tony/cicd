@@ -1,0 +1,12 @@
+classes:
+  - cluster.cicd_lab_dev.config
+  - cluster.cicd_lab_dev.cicd.control.master
+parameters:
+  _param:
+    single_address: 172.16.10.11
+    keepalived_vip_priority: 103
+    linux_system_codename: xenial
+  linux:
+    system:
+      name: ci01
+      domain: cicd-lab-dev.local

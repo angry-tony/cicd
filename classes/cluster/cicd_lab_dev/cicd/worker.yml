@@ -1,0 +1,5 @@
+classes:
+  - cluster.cicd_lab_dev.cicd
+  - system.linux.system.single
+  - system.jenkins.slave.docker
+  - system.aptly.client.publisher

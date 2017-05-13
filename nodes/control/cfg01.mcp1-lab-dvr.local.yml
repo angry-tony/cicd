@@ -1,0 +1,12 @@
+classes:
+- cluster.mcp1_lab_dvr.infra.config
+- cluster.mcp1_lab_dvr.openstack.proxy
+- cluster.mcp1_lab_dvr.stacklight.proxy
+parameters:
+  _param:
+    linux_system_codename: xenial
+    reclass_data_revision: master
+  linux:
+    system:
+      name: cfg01
+      domain: mcp1-lab-dvr.local

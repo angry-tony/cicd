@@ -1,0 +1,36 @@
+classes:
+  - system.docker.swarm.master
+  # Services
+  - system.docker.client
+  - system.aptly.server.docker
+  - system.aptly.client.publisher
+  # Jenkins
+  - system.jenkins.master.config
+  - system.jenkins.client
+  # ..credentials
+  - system.jenkins.client.credential.gerrit
+  - system.jenkins.client.credential.salt
+  # ..security
+  - system.jenkins.client.security.ldap
+  - system.jenkins.client.security.matrix
+  # ..jobs
+  - system.jenkins.client.job.aptly
+  - system.jenkins.client.job.git-mirrors.downstream.pipelines
+  - system.jenkins.client.job.deploy.lab.mk.physical
+  - system.jenkins.client.job.deploy.update.package
+  - system.jenkins.client.job.deploy.update.config
+  # Gerrit
+  - system.gerrit.client
+  - system.gerrit.client.project.ci
+  # OpenLDAP
+  - system.openldap.client
+  - system.openldap.client.people.admin
+  # At last
+  - cluster.cicd_lab_dev.cicd.control
+  # DevOps Portal
+  - service.devops_portal.config
+  # Rundeck
+  - system.rundeck.server.docker
+  - system.rundeck.client
+  # ..projects
+  - system.rundeck.client.project.cicd

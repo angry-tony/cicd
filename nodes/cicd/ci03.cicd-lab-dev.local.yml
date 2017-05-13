@@ -1,0 +1,12 @@
+classes:
+  - cluster.cicd_lab_dev.cicd.control.slave
+parameters:
+  _param:
+    single_address: 172.16.10.13
+    docker_swarm_role: worker
+    keepalived_vip_priority: 101
+    linux_system_codename: xenial
+  linux:
+    system:
+      name: ci03
+      domain: cicd-lab-dev.local

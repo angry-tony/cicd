@@ -1,0 +1,10 @@
+classes:
+  - cluster.cicd_lab_dev
+parameters:
+  _param:
+    # CI/CD control infrastructure
+    control_node01_address: 172.16.10.11
+    control_node02_address: 172.16.10.12
+    control_node03_address: 172.16.10.13
+    control_vip_address: 172.16.10.254
+    control_public_host: ${_param:control_vip_address}

@@ -1,0 +1,15 @@
+classes:
+  - cluster.cicd_lab_dev
+  - system.salt.master.pkg
+  - system.salt.master.api
+  - system.salt.minion.ca.salt_master
+  - system.reclass.storage.salt
+  - system.sphinx.server.doc.reclass
+parameters:
+  _param:
+    apt_mk_version: nightly
+    reclass_data_repository: https://gerrit.mcp.mirantis.net/salt-models/qa
+    reclass_data_revision: master
+    reclass_config_master: ${_param:salt_master_host}
+    salt_master_base_environment: prd
+    salt_minion_ca_host: ${linux:network:fqdn}
