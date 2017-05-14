@@ -37,16 +37,16 @@ classes:
   - system.docker.host
   # Docker services
   - system.docker.swarm.stack.aptly
-  - system.docker.swarm.stack.devops_portal
+  #- system.docker.swarm.stack.devops_portal
   - system.docker.swarm.stack.docker
-  - system.docker.swarm.stack.elasticsearch
+  #- system.docker.swarm.stack.elasticsearch
   - system.docker.swarm.stack.gerrit
   - system.docker.swarm.stack.jenkins
   - system.docker.swarm.stack.ldap
-  - system.docker.swarm.stack.postgresql
-  - system.docker.swarm.stack.pushkin
-  - system.docker.swarm.stack.rundeck
-  - system.docker.swarm.stack.security_monkey
+  #- system.docker.swarm.stack.postgresql
+  #- system.docker.swarm.stack.pushkin
+  #- system.docker.swarm.stack.rundeck
+  #- system.docker.swarm.stack.security_monkey
 
   # Keepalived
   - system.keepalived.cluster.instance.cicd_control_vip
@@ -61,28 +61,28 @@ classes:
   - system.haproxy.proxy.listen.docker.visualizer
   - system.haproxy.proxy.listen.mysql
   - system.haproxy.proxy.listen.openldap
-  - system.haproxy.proxy.listen.oss.devops_portal
-  - system.haproxy.proxy.listen.oss.elasticsearch
-  - system.haproxy.proxy.listen.oss.postgresql
-  - system.haproxy.proxy.listen.oss.pushkin
-  - system.haproxy.proxy.listen.oss.rundeck
-  - system.haproxy.proxy.listen.oss.security_monkey
+  #- system.haproxy.proxy.listen.oss.devops_portal
+  #- system.haproxy.proxy.listen.oss.elasticsearch
+  #- system.haproxy.proxy.listen.oss.postgresql
+  #- system.haproxy.proxy.listen.oss.pushkin
+  #- system.haproxy.proxy.listen.oss.rundeck
+  #- system.haproxy.proxy.listen.oss.security_monkey
   - system.haproxy.proxy.listen.phpldapadmin
   - system.haproxy.proxy.listen.stats
 
-  - system.postgresql.client.pushkin
-  - system.postgresql.client.security_monkey
+  #- system.postgresql.client.pushkin
+  #- system.postgresql.client.security_monkey
 
   # OSS Tooling
-  - system.devops_portal.service.elasticsearch
-  - system.devops_portal.service.gerrit
-  - system.devops_portal.service.jenkins
-  - system.devops_portal.service.pushkin
-  - system.devops_portal.service.rundeck
-  - system.devops_portal.service.security_monkey
+  #- system.devops_portal.service.elasticsearch
+  #- system.devops_portal.service.gerrit
+  #- system.devops_portal.service.jenkins
+  #- system.devops_portal.service.pushkin
+  #- system.devops_portal.service.rundeck
+  #- system.devops_portal.service.security_monkey
 
   # Rundeck
-  - system.rundeck.client.runbook
+  #- system.rundeck.client.runbook
 
 parameters:
   _param:
@@ -96,7 +96,7 @@ parameters:
     keepalived_vip_virtual_router_id: 180
     keepalived_vip_priority: 103
     keepalived_vip_password: password
-    keepalived_vip_interface: ens3
+    keepalived_vip_interface: edge0
 
     cluster_vip_address: ${_param:control_vip_address}
     cluster_public_host: ${_param:control_public_host}
@@ -349,8 +349,6 @@ parameters:
     network:
       resolv:
         dns:
-        - 172.18.176.4
-        - 172.18.176.5
         - 8.8.8.8
     system:
       package:
