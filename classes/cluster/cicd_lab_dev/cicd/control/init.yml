@@ -5,32 +5,32 @@ classes:
   # GlusterFS
   - system.glusterfs.server.cluster
   - system.glusterfs.server.volume.aptly
-  - system.glusterfs.server.volume.elasticsearch
-  - system.glusterfs.server.volume.devops_portal
+#  - system.glusterfs.server.volume.elasticsearch
+#  - system.glusterfs.server.volume.devops_portal
   - system.glusterfs.server.volume.gerrit
   - system.glusterfs.server.volume.jenkins
   - system.glusterfs.server.volume.mysql
   - system.glusterfs.server.volume.openldap
-  - system.glusterfs.server.volume.postgresql
-  - system.glusterfs.server.volume.pushkin
-  - system.glusterfs.server.volume.registry
-  - system.glusterfs.server.volume.rundeck
-  - system.glusterfs.server.volume.security_monkey
+#  - system.glusterfs.server.volume.postgresql
+#  - system.glusterfs.server.volume.pushkin
+#  - system.glusterfs.server.volume.registry
+#  - system.glusterfs.server.volume.rundeck
+#  - system.glusterfs.server.volume.security_monkey
     #- system.glusterfs.server.volume.salt
 
   - system.glusterfs.client.cluster
   - system.glusterfs.client.volume.aptly
-  - system.glusterfs.client.volume.devops_portal
-  - system.glusterfs.client.volume.elasticsearch
+ # - system.glusterfs.client.volume.devops_portal
+ # - system.glusterfs.client.volume.elasticsearch
   - system.glusterfs.client.volume.gerrit
   - system.glusterfs.client.volume.jenkins
   - system.glusterfs.client.volume.mysql
   - system.glusterfs.client.volume.openldap
-  - system.glusterfs.client.volume.postgresql
-  - system.glusterfs.client.volume.pushkin
-  - system.glusterfs.client.volume.registry
-  - system.glusterfs.client.volume.rundeck
-  - system.glusterfs.client.volume.security_monkey
+ # - system.glusterfs.client.volume.postgresql
+ # - system.glusterfs.client.volume.pushkin
+ # - system.glusterfs.client.volume.registry
+  #- system.glusterfs.client.volume.rundeck
+ # - system.glusterfs.client.volume.security_monkey
     #- system.glusterfs.client.volume.salt
 
   # Docker

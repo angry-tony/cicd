@@ -30,7 +30,7 @@ classes:
   # DevOps Portal
   - service.devops_portal.config
   # Rundeck
-  - system.rundeck.server.docker
-  - system.rundeck.client
+  #- system.rundeck.server.docker
+  #- system.rundeck.client
   # ..projects
-  - system.rundeck.client.project.cicd
+ # - system.rundeck.client.project.cicd
